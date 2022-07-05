@@ -65,6 +65,7 @@ class FlowTest: XCTestCase {
       
         XCTAssertEqual(router.routedQuestions, ["Q1"])
     }
+    
     //MARK: - Helpers
     
     func makeSUT(questions: [String]) -> Flow {
