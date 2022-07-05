@@ -25,7 +25,7 @@ class Flow{
             router.routeTo(question: firstQuestion){ [weak self] _ in
                 guard let self = self else { return }
                 let firstQuestionIndex = self.questions.firstIndex(of: firstQuestion)!
-                let nextQuestion = self.questions[ firstQuestionIndex+1]
+                let nextQuestion = self.questions[firstQuestionIndex+1]
                 self.router.routeTo(question: nextQuestion) { _ in }
             }
         }
