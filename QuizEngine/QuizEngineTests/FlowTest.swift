@@ -51,13 +51,9 @@ class FlowTest: XCTestCase {
     //MARK: - Helpers
     
     class RouterSpy: Router {
-        var routedQuestionsCount: Int = 0
-        var routedQuestion: String =  ""
         var routedQuestions: [String] = []
         
         func routeTo(question: String) {
-            routedQuestionsCount += 1
-            routedQuestion = question
             routedQuestions.append(question)
         }
     }
