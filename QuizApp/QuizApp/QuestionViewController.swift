@@ -10,11 +10,15 @@ import UIKit
 class QuestionViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
-    private var question: String  = ""
+    @IBOutlet weak var tableView: UITableView!
     
-    convenience init(question: String){
+    private var question: String  = ""
+    private var options:[String] = []
+    
+    convenience init(question: String, options:[String]){
         self.init()
         self.question = question
+        self.options = options
     }
   
     
@@ -23,6 +27,16 @@ class QuestionViewController: UIViewController {
         
         headerLabel.text = question
     }
+}
+
+//MARK: - UITableView DataSource
+
+extension QuestionViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }
