@@ -14,12 +14,10 @@ class QuestionViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSUT(question: "Q1").headerLabel.text, "Q1")
     }
     
-    func test_viewDidLoad_withZeroOptions_rendersZeroOptions(){
+    func test_viewDidLoad_rendersOneOptions(){
         XCTAssertEqual(makeSUT(options: []).tableView.numberOfRows(inSection: 0), 0)
-    }
-    
-    func test_viewDidLoad_withOneOptions_rendersOneOptions(){
         XCTAssertEqual(makeSUT(options:["A1"]).tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(makeSUT(options:["A1", "A2"]).tableView.numberOfRows(inSection: 0), 2)
     }
     
     func test_viewDidLoad_withOneOption_rendersOneOptionText(){
