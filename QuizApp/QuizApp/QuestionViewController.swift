@@ -15,9 +15,9 @@ class QuestionViewController: UIViewController {
     private var question = ""
     private var options = [String]()
     private let reuseIdentifier = "Cell"
-    private var selection: ((String) -> Void)? = nil
+    private var selection: (([String]) -> Void)? = nil
     
-    convenience init(question: String, options:[String],selection: @escaping (String) -> Void){
+    convenience init(question: String, options:[String],selection: @escaping ([String]) -> Void){
         self.init()
         self.question = question
         self.options = options
@@ -56,6 +56,6 @@ extension QuestionViewController: UITableViewDataSource {
 
 extension QuestionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selection?(options[indexPath.row])
+        selection?([options[indexPath.row]])
     }
 }
