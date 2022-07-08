@@ -21,9 +21,7 @@ class QuestionViewControllerTests: XCTestCase {
     }
     
     func test_viewDidLoad_withOneOption_rendersOneOptionText(){
-        let sut = makeSUT(options:["A1"])
-   
-        XCTAssertEqual(sut.tableView.title(at: 0), "A1")
+        XCTAssertEqual(makeSUT(options:["A1"]).tableView.title(at: 0), "A1")
     }
     
     //MARK: - Helpers
