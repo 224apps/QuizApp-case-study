@@ -20,8 +20,9 @@ class QuestionViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSUT(options:["A1", "A2"]).tableView.numberOfRows(inSection: 0), 2)
     }
     
-    func test_viewDidLoad_withOneOption_rendersOneOptionText(){
-        XCTAssertEqual(makeSUT(options:["A1"]).tableView.title(at: 0), "A1")
+    func test_viewDidLoad_rendersOptionText(){
+        XCTAssertEqual(makeSUT(options:["A1","A2"]).tableView.title(at: 0), "A1")
+        XCTAssertEqual(makeSUT(options:["A2","A2"]).tableView.title(at: 1), "A2")
     }
     
     //MARK: - Helpers
