@@ -15,11 +15,13 @@ class QuestionViewController: UIViewController {
     private var question = ""
     private var options = [String]()
     private let reuseIdentifier = "Cell"
+    private var selection: ((String) -> Void)? = nil
     
-    convenience init(question: String, options:[String]){
+    convenience init(question: String, options:[String],selection: @escaping (String) -> Void){
         self.init()
         self.question = question
         self.options = options
+        self.selection = selection
     }
   
     override func viewDidLoad() {
@@ -47,5 +49,13 @@ extension QuestionViewController: UITableViewDataSource {
         let cell = dequeueCell(in: tableView)
         cell.textLabel?.text = options[indexPath.row]
         return cell
+    }
+}
+
+//MARK: - UITableView Delegate
+
+extension QuestionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selection?(options[indexPath.row])
     }
 }
