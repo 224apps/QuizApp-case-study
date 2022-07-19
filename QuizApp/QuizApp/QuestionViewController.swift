@@ -65,6 +65,8 @@ extension QuestionViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if tableView.allowsMultipleSelection {
         selection?(selectedOptions(in: tableView))
+        }
     }
 }

@@ -36,6 +36,17 @@ class QuestionViewControllerTests: XCTestCase {
         XCTAssertEqual(receivedAnswer, ["A2"])
     }
     
+    func test_optionDeselected_withSingleSelection_doesNotNotifyDelegateWithEmptySelection(){
+        var callbackCount = 0
+        let sut = makeSUT(options: ["A1", "A2"]){ _ in callbackCount += 1 }
+        
+        sut.tableView.select(at: 0)
+        XCTAssertEqual(callbackCount, 1)
+        
+        sut.tableView.deselect(at: 0)
+        XCTAssertEqual(callbackCount, 1)
+    }
+    
     func test_optionSelected_withMultipleSelectionEnabled_notifiesDelegateSelection(){
 
         var receivedAnswer = [String]()
