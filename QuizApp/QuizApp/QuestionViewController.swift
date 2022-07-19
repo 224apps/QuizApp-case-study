@@ -36,6 +36,11 @@ class QuestionViewController: UIViewController {
         }
         return UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
     }
+    
+    private func selectedOptions(in tableView: UITableView) -> [String] {
+        guard let indexPaths = tableView.indexPathsForSelectedRows else { return  []}
+        return indexPaths.map{ options[$0.row]}
+    }
 }
 
 //MARK: - UITableView DataSource
@@ -56,6 +61,10 @@ extension QuestionViewController: UITableViewDataSource {
 
 extension QuestionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selection?([options[indexPath.row]])
+        selection?(selectedOptions(in: tableView))
     }
+    
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        selection?(selectedOptions(in: tableView))
+//    }
 }
