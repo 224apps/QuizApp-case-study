@@ -49,18 +49,18 @@ class QuestionViewControllerTests: XCTestCase {
         XCTAssertEqual(receivedAnswer, ["A1", "A2"])
     }
     
-//    func test_optionDeselected_withMultipleSelectionEnabled_notifiesDelegateSelection(){
-//
-//        var receivedAnswer = [String]()
-//        let sut = makeSUT(options: ["A1", "A2"]){ receivedAnswer = $0 }
-//        sut.tableView.allowsMultipleSelection = true
-//
-//        sut.tableView.select(at: 0)
-//        XCTAssertEqual(receivedAnswer, ["A1"])
-//
-//        sut.tableView.deselect(at: 0)
-//        XCTAssertEqual(receivedAnswer, [])
-//    }
+    func test_optionDeselected_withMultipleSelectionEnabled_notifiesDelegateSelection(){
+
+        var receivedAnswer = [String]()
+        let sut = makeSUT(options: ["A1", "A2"]){ receivedAnswer = $0 }
+        sut.tableView.allowsMultipleSelection = true
+
+        sut.tableView.select(at: 0)
+        XCTAssertEqual(receivedAnswer, ["A1"])
+
+        sut.tableView.deselect(at: 0)
+        XCTAssertEqual(receivedAnswer, [])
+    }
 
     
     
@@ -90,9 +90,9 @@ private extension UITableView {
         delegate?.tableView?(self, didSelectRowAt: indexPath)
     }
     
-//    func deselect(at row: Int){
-//        let indexPath = IndexPath(row: row, section: 0)
-//        deselectRow(at: indexPath, animated: false)
-//        delegate?.tableView?(self, didDeselectRowAt: indexPath)
-//    }
+    func deselect(at row: Int){
+        let indexPath = IndexPath(row: row, section: 0)
+        deselectRow(at: indexPath, animated: false)
+        delegate?.tableView?(self, didDeselectRowAt: indexPath)
+    }
 }
