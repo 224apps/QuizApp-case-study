@@ -16,7 +16,7 @@ class ResultsViewControllerTest: XCTestCase {
     
     func test_viewDidLoad_renderAnswers(){
         XCTAssertEqual(makeSUT(answers: []).tableView.numberOfRows(inSection: 0), 0)
-        XCTAssertEqual(makeSUT(answers: ["A1"]).tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(makeSUT(answers: [makeDummyAnswer()]).tableView.numberOfRows(inSection: 0), 1)
     }
     
     //MARK: - Helpers
@@ -24,6 +24,10 @@ class ResultsViewControllerTest: XCTestCase {
         let sut = ResultsViewController(summary: summary, answers: answers)
         _ = sut.view
         return sut
+    }
+    
+    private func makeDummyAnswer() -> String {
+        return "an answer"
     }
 
 }
