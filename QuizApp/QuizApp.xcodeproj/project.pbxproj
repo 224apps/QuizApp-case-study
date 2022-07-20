@@ -15,6 +15,9 @@
 		45A06062287784E800E7EEFA /* QuestionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A06061287784E800E7EEFA /* QuestionViewControllerTests.swift */; };
 		45A06064287784F300E7EEFA /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A06063287784F300E7EEFA /* QuestionViewController.swift */; };
 		45A060662877860500E7EEFA /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45A060652877860500E7EEFA /* QuestionViewController.xib */; };
+		45DD26A128883EFC00D79170 /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD26A028883EFC00D79170 /* ResultsViewControllerTest.swift */; };
+		45DD26A428883FD900D79170 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD26A228883F1300D79170 /* ResultsViewController.swift */; };
+		45DD26A628883FF600D79170 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45DD26A528883FF600D79170 /* ResultsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		45A06061287784E800E7EEFA /* QuestionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerTests.swift; sourceTree = "<group>"; };
 		45A06063287784F300E7EEFA /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		45A060652877860500E7EEFA /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		45DD26A028883EFC00D79170 /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
+		45DD26A228883F1300D79170 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		45DD26A528883FF600D79170 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +91,10 @@
 				45A06034287782F300E7EEFA /* Assets.xcassets */,
 				45A06036287782F300E7EEFA /* LaunchScreen.storyboard */,
 				45A06039287782F300E7EEFA /* Info.plist */,
+				45DD26A228883F1300D79170 /* ResultsViewController.swift */,
 				45A06063287784F300E7EEFA /* QuestionViewController.swift */,
 				45A060652877860500E7EEFA /* QuestionViewController.xib */,
+				45DD26A528883FF600D79170 /* ResultsViewController.xib */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -96,6 +104,7 @@
 			children = (
 				45A06042287782F300E7EEFA /* QuizAppTests.swift */,
 				45A06061287784E800E7EEFA /* QuestionViewControllerTests.swift */,
+				45DD26A028883EFC00D79170 /* ResultsViewControllerTest.swift */,
 			);
 			path = QuizAppTests;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 				45A06038287782F300E7EEFA /* LaunchScreen.storyboard in Resources */,
 				45A06035287782F300E7EEFA /* Assets.xcassets in Resources */,
 				45A060662877860500E7EEFA /* QuestionViewController.xib in Resources */,
+				45DD26A628883FF600D79170 /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +214,7 @@
 				45A06030287782F100E7EEFA /* ViewController.swift in Sources */,
 				45A0602C287782F100E7EEFA /* AppDelegate.swift in Sources */,
 				45A06064287784F300E7EEFA /* QuestionViewController.swift in Sources */,
+				45DD26A428883FD900D79170 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DD26A128883EFC00D79170 /* ResultsViewControllerTest.swift in Sources */,
 				45A06062287784E800E7EEFA /* QuestionViewControllerTests.swift in Sources */,
 				45A06043287782F300E7EEFA /* QuizAppTests.swift in Sources */,
 			);
