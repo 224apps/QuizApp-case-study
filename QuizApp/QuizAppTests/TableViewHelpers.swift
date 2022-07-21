@@ -7,7 +7,7 @@
 
 import UIKit
 
-private extension UITableView {
+extension UITableView {
     func cell(at row: Int) -> UITableViewCell? {
         return dataSource?.tableView(self, cellForRowAt: IndexPath(row: row, section: 0))
     }
