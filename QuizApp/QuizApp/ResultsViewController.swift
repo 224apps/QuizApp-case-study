@@ -14,6 +14,8 @@ class CorrectAnswerCell: UITableViewCell {
     
 }
 
+class WrongAnswerCell: UITableViewCell {
+}
 
 class ResultsViewController: UIViewController {
     
@@ -36,7 +38,8 @@ class ResultsViewController: UIViewController {
 
 extension ResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return CorrectAnswerCell()
+        let answer = answers[indexPath.row]
+        return answer.isCorrect ? CorrectAnswerCell() : WrongAnswerCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
