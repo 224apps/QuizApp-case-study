@@ -11,7 +11,6 @@ struct PresentableAnswer {
     let question: String
     let answer: String
     let wrongAnswer: String?
-    let isCorrect: Bool
 }
 class CorrectAnswerCell: UITableViewCell {
     @IBOutlet weak var questionLabel: UILabel!
@@ -53,20 +52,23 @@ class ResultsViewController: UIViewController {
         cell.answerLabel.text = answer.answer
         return cell
     }
+    
+    private func wrongAnswerCell(for answer: PresentableAnswer) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as! WrongAnswerCell
+        cell.questionLabel.text = answer.question
+        cell.correctAnswerLabel.text = answer.answer
+        cell.wrongAnswerLabel.text = answer.wrongAnswer
+        return cell
+    }
 }
 
 extension ResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let answer = answers[indexPath.row]
-        if answer.isCorrect {
+        if answer.wrongAnswer == nil {
             return correctAnswerCell(for: answer)
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as! WrongAnswerCell
-        
-        cell.questionLabel.text = answer.question
-        cell.correctAnswerLabel.text = answer.answer
-        cell.wrongAnswerLabel.text = answer.wrongAnswer
-        return cell
+        return wrongAnswerCell(for: answer)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
