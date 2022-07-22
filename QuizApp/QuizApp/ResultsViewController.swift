@@ -38,18 +38,21 @@ class ResultsViewController: UIViewController {
         headerLabel.text = summary
         tableView.register(UINib(nibName: "CorrectAnswerCell", bundle: nil), forCellReuseIdentifier: "CorrectAnswerCell")
     }
+    
+    //MARK: - Private Methods
+    
+    private func correctAnswerCell(for answer: PresentableAnswer) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CorrectAnswerCell") as! CorrectAnswerCell
+        cell.questionLabel.text = answer.question
+        cell.answerLabel.text = answer.answer
+        return cell
+    }
 }
 
 extension ResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let answer = answers[indexPath.row]
-        if  answer.isCorrect {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CorrectAnswerCell") as! CorrectAnswerCell
-            cell.questionLabel.text = answer.question
-            cell.answerLabel.text = answer.answer
-            return cell
-        }
-        return WrongAnswerCell()
+        return  answer.isCorrect ? correctAnswerCell(for: answer):  WrongAnswerCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
