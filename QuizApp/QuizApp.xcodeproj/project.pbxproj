@@ -21,6 +21,10 @@
 		45DEB52E28892E8600C12709 /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEB52D28892E8600C12709 /* TableViewHelpers.swift */; };
 		45DEB530288A478400C12709 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45DEB52F288A478400C12709 /* CorrectAnswerCell.xib */; };
 		45DEB532288A4AF700C12709 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45DEB531288A4AF700C12709 /* WrongAnswerCell.xib */; };
+		45DEB534288A553E00C12709 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEB533288A553E00C12709 /* UITableViewExtensions.swift */; };
+		45DEB536288A556000C12709 /* PresentableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEB535288A556000C12709 /* PresentableAnswer.swift */; };
+		45DEB538288A557C00C12709 /* CorrectAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEB537288A557C00C12709 /* CorrectAnswerCell.swift */; };
+		45DEB53A288A558400C12709 /* WrongAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DEB539288A558400C12709 /* WrongAnswerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		45DEB52D28892E8600C12709 /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 		45DEB52F288A478400C12709 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
 		45DEB531288A4AF700C12709 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
+		45DEB533288A553E00C12709 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		45DEB535288A556000C12709 /* PresentableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableAnswer.swift; sourceTree = "<group>"; };
+		45DEB537288A557C00C12709 /* CorrectAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerCell.swift; sourceTree = "<group>"; };
+		45DEB539288A558400C12709 /* WrongAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,16 @@
 				45A06034287782F300E7EEFA /* Assets.xcassets */,
 				45A06036287782F300E7EEFA /* LaunchScreen.storyboard */,
 				45A06039287782F300E7EEFA /* Info.plist */,
+				45DEB537288A557C00C12709 /* CorrectAnswerCell.swift */,
+				45DEB539288A558400C12709 /* WrongAnswerCell.swift */,
 				45DD26A228883F1300D79170 /* ResultsViewController.swift */,
 				45A06063287784F300E7EEFA /* QuestionViewController.swift */,
 				45A060652877860500E7EEFA /* QuestionViewController.xib */,
 				45DD26A528883FF600D79170 /* ResultsViewController.xib */,
 				45DEB52F288A478400C12709 /* CorrectAnswerCell.xib */,
 				45DEB531288A4AF700C12709 /* WrongAnswerCell.xib */,
+				45DEB533288A553E00C12709 /* UITableViewExtensions.swift */,
+				45DEB535288A556000C12709 /* PresentableAnswer.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -222,8 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DEB534288A553E00C12709 /* UITableViewExtensions.swift in Sources */,
 				45A06030287782F100E7EEFA /* ViewController.swift in Sources */,
+				45DEB538288A557C00C12709 /* CorrectAnswerCell.swift in Sources */,
 				45A0602C287782F100E7EEFA /* AppDelegate.swift in Sources */,
+				45DEB536288A556000C12709 /* PresentableAnswer.swift in Sources */,
+				45DEB53A288A558400C12709 /* WrongAnswerCell.swift in Sources */,
 				45A06064287784F300E7EEFA /* QuestionViewController.swift in Sources */,
 				45DD26A428883FD900D79170 /* ResultsViewController.swift in Sources */,
 			);
